@@ -12,20 +12,22 @@ public class EchoPcmAudioFilter extends ConverterPcmAudioFilter<EchoConverter> {
     /**
      * @param echoLength A new echo buffer length in seconds.
      */
-    public void setEchoLength(double echoLength){
+    public EchoPcmAudioFilter setEchoLength(double echoLength){
         for(EchoConverter converter: converters()){
             converter.setEchoLength(echoLength);
         }
+        return this;
     }
 
     /**
      * A decay, should be a value between zero and one.
      * @param decay the new decay (preferably between zero and one).
      */
-    public void setDecay(float decay){
+    public EchoPcmAudioFilter setDecay(float decay){
         for(EchoConverter converter: converters()){
             converter.setDecay(decay);
         }
+        return this;
     }
 }
 

@@ -4,7 +4,7 @@ import com.github.natanbc.lavadsp.Converter;
 
 public class EchoConverter implements Converter {
     private final int sampleRate;
-    private float[] echoBuffer;//in seconds
+    private float[] echoBuffer;
     private double echoLength;
     private int position;
     private float decay;
