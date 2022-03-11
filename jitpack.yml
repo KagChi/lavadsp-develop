@@ -1,0 +1,2 @@
+install:
+  - ./gradlew buildLinuxGlibc64 && ./gradlew jar
